@@ -1,3 +1,6 @@
-﻿# simple script to add user, will expand upon later
+﻿$name = Read-Host "Please enter the first name"
+$lastname = Read-Host "Please enter your laste name"
+$username = Read-Host "Please enter your user name (Format: first letter of your first name, followed by your laste name"
+$department = Read-Host "Which department will this user be a part of?"
 
-New-ADUser -Name "John Doe" -GivenName "John" -Surname "Doe" -SamAccountName "Jdoe" -UserPrincipalName "Jdoe@innovative.com" -Path "OU=Marketing,DC=innovative,DC=com" -Enabled $true
+New-ADUser -Name $name -GivenName $username -Surname $lastname -SamAccountName $username -Department $department -Enabled $true
